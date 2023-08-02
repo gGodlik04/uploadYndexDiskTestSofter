@@ -6,35 +6,18 @@ import Key from "./Keyrouting";
 import UploadYa from "./UploadYa";
 
 
-export const Load = (props) => {
+export default function ConnectYaID() {
 
-   return (
-      <div>
-         <div>Токен успешно получен, можете загружать файлы на яндекс диск все чотка</div>
-      </div>
-   )
-}
-
-
-
-
-export default function UploadFileTest() {
-
-   const [flagResponse, setFlagResponse] = useState(false);
    const [dates, setDates] = useState([]);
-   const [token, setToken] = useState('fdssssssssfs');
 
-   useEffect(() => {
-
-   }, [dates])
 
    useEffect(() => {
       connect();
    }, [])
+ 
 
    const connect = async () => {
       const data = await getConnect();
-
    }
 
    const getConnect = () => {
@@ -56,7 +39,7 @@ export default function UploadFileTest() {
             .then(({
                handler
             }) => handler())
-            .then(data => { console.log('Сообщение с токеном', data); setDates(data); setFlagResponse(true) })
+            .then(data => { console.log('Сообщение с токеном', data); setDates(data);})
             .catch(error => console.log('Обработка ошибки', error))
       }
    }
@@ -64,10 +47,10 @@ export default function UploadFileTest() {
 
 
    return (
-      <div className="Test">
+      <div className="container">
          <Routes>
-            <Route path="/key" element={<Key setToken={setToken} />} />
-            <Route path="" element={<UploadYa/>} />
+            <Route path="/key" element={<Key />} />
+            <Route path="" element={<UploadYa dates={dates}/>} />
          </Routes>        
       </div>
    )

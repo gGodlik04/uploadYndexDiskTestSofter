@@ -1,24 +1,61 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'ProximaNova', serif;
+    box-sizing: border-box;
 }
+
+.yaPersonalButton{
+    width: 50%;
+    z-index: 9999;
+    bottom: 500px;
+}
+
+.main{
+    margin: 0px 250px 0px 250px;
+    vertical-align: center;
+}
+
+.description{
+    position: relative;
+    bottom: 10px;
+}
+
+.content{
+    background-color: #fff;
+    height: 200px;
+}
+
+body{
+    background-color: #EFF1FC;
+}
+
 .buttonLoad{
     height: 50px;
     width: 80px;
     border-radius: 3px;
+    margin-top: 50px;
+    margin-left: 50px;
 }
 
 input{
-    
+    margin-right: 100px;
+    height: 100px;
 }
 
 .header{
+    margin: 0;
     height: 50px;
     width: 100%;
-    background-color: #093ff3;
+    background-color: #6B5FDB;
     color:aliceblue;
     text-align: center;
     padding-top: 20px;
     font-weight: 700;
     font-size: 20px;    
+}
+
+@font-face {
+    font-family: 'ProximaNova';
+    src: local('ProximaNova'), url(./fonts/proximanova_regular.ttf) format('truetype');
 }

@@ -1,4 +1,4 @@
-import UploadFileTest from "./UploadFileTest";
+import ConnectYaID from "./ConnectYaID";
 import { YaAuthSuggest } from 'https://yastatic.net/s3/passport-sdk/autofill/v1/sdk-suggest-token-with-polyfills-latest.js';
 import './style.css';
 
@@ -6,9 +6,8 @@ import './style.css';
 export default function App() {
   return (
     <div className="App">
-      <UploadFileTest/>
+      <ConnectYaID/>
     </div>
   );
 }
 
-// y0_AgAAAAAhelDrAApCVwAAAADo8qW6HoHXnZGkR12N3AlLFoionjCcpxo
