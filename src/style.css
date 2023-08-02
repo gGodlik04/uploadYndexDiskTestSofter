@@ -19,6 +19,8 @@
 .description{
     position: relative;
     bottom: 10px;
+    font-family: 'ProximaNova';
+    font-weight:700;
 }
 
 .content{
